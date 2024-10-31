@@ -1,0 +1,15 @@
+const mongoose = require("mongoose");
+
+// dados para a carteira de estudante 
+const StudentSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  cpf: { type: String, required: true },
+  birthDate: { type: Date, required: true },
+  institution: { type: String, required: true },
+  course: { type: String, required: true },
+  issuer: { type: String, required: true },
+  validity: { type: Date, required: true },
+  userId: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
+});
+
+module.exports = mongoose.model("Student", StudentSchema);
