@@ -1,0 +1,63 @@
+### Cadastra um novo usuário
+POST http://localhost:3000/api/auth/signup
+Content-Type: application/json
+
+{
+  "email": "Julliaazevedo123@esuda.edu.br",
+  "password": "senha",
+  "name": "Jullia Azevedo Pinto"
+}
+
+### Entra com um usuário existente
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "Julliaazevedo123@esuda.edu.br",
+  "password": "senha"
+}
+
+### Retorna todas as carteirinhas (Protegido)
+GET http://localhost:3000/api/students
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MjkyMmQ1OGJmYjgwMDg1NWYyOTNjMiIsImlhdCI6MTczMDc0OTE4NSwiZXhwIjoxNzMwNzUyNzg1fQ.ywHaiNvgweTW2MKFGeDlcwePfR5DzueqoXhjIdb8Xq8
+
+### Cria carteirinha (Protegido)
+POST http://localhost:3000/api/students
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MjkyMmQ1OGJmYjgwMDg1NWYyOTNjMiIsImlhdCI6MTczMDc0OTE4NSwiZXhwIjoxNzMwNzUyNzg1fQ.ywHaiNvgweTW2MKFGeDlcwePfR5DzueqoXhjIdb8Xq8
+
+{
+  "name": "Nicolle",
+  "cpf": "243.233.111-23",
+  "birthDate": "2001-08-29",
+  "institution": "Falcudade ESUDA",
+  "course": "Marketing digital",
+  "issuer": "Falcudade ESUDA",
+  "validity": "2025-03-30"
+}
+
+### Retorna uma única carteirinha pelo ID (Protegido)
+# Substitua `student_id` com o ID do estudante para testar este endpoint
+GET http://localhost:3000/api/students/6729246d8bfb800855f293d2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MjkyMmQ1OGJmYjgwMDg1NWYyOTNjMiIsImlhdCI6MTczMDc0OTE4NSwiZXhwIjoxNzMwNzUyNzg1fQ.ywHaiNvgweTW2MKFGeDlcwePfR5DzueqoXhjIdb8Xq8
+
+### Atualiza um Estudante pelo ID (Protegido)
+# Substitua `student_id` com o ID do estudante para atualizar
+PUT http://localhost:3000/api/students/6729246d8bfb800855f293d2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MjkyMmQ1OGJmYjgwMDg1NWYyOTNjMiIsImlhdCI6MTczMDc0OTE4NSwiZXhwIjoxNzMwNzUyNzg1fQ.ywHaiNvgweTW2MKFGeDlcwePfR5DzueqoXhjIdb8Xq8
+
+{
+  "name": "Nicolle",
+  "cpf": "243.233.111-23",
+  "birthDate": "2001-08-29",
+  "institution": "Falcudade ESUDA",
+  "course": "ADS",
+  "issuer": "Falcudade ESUDA",
+  "validity": "2025-03-30"
+}
+
+### Deleta um estudante pelo ID (Protegido)
+# Substitua `student_id` com o ID do estudante para apagar
+DELETE http://localhost:3000/api/students/6729246d8bfb800855f293d2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MjkyMmQ1OGJmYjgwMDg1NWYyOTNjMiIsImlhdCI6MTczMDc0OTE4NSwiZXhwIjoxNzMwNzUyNzg1fQ.ywHaiNvgweTW2MKFGeDlcwePfR5DzueqoXhjIdb8Xq8
