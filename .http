@@ -3,43 +3,43 @@ POST http://localhost:3000/api/auth/signup
 Content-Type: application/json
 
 {
-  "email": "Julliaazevedo123@esuda.edu.br",
-  "password": "senha",
-  "name": "Jullia Azevedo Pinto"
+  "email": "17232054@esuda.edu.br",
+  "password": "senha123",
+  "name": "Jullia Azevedo"
 }
 
 ### Entra com um usuário existente
-POST http://localhost:3000/api/auth/login
+POST https://minha-esuda-back.onrender.com/api/auth/login
 Content-Type: application/json
 
 {
-  "email": "Julliaazevedo123@esuda.edu.br",
-  "password": "senha"
+  "email": "17232054@esuda.edu.br",
+  "password": "senha123"
 }
 
 ### Retorna todas as carteirinhas (Protegido)
 GET http://localhost:3000/api/students
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MjkyMmQ1OGJmYjgwMDg1NWYyOTNjMiIsImlhdCI6MTczMDc0OTE4NSwiZXhwIjoxNzMwNzUyNzg1fQ.ywHaiNvgweTW2MKFGeDlcwePfR5DzueqoXhjIdb8Xq8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NDY2OWU5YzI0NDdkODBhZGQ0YzlhYyIsImlhdCI6MTczMjY2NzkwNCwiZXhwIjoxNzMyNjcxNTA0fQ.Zt5zKsfHrISsuSNkGTJwydy_YyTElq9VmExLo7Xg2gw
 
 ### Cria carteirinha (Protegido)
-POST http://localhost:3000/api/students
+POST https://minha-esuda-back.onrender.com/api/students
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MjkyMmQ1OGJmYjgwMDg1NWYyOTNjMiIsImlhdCI6MTczMDc0OTE4NSwiZXhwIjoxNzMwNzUyNzg1fQ.ywHaiNvgweTW2MKFGeDlcwePfR5DzueqoXhjIdb8Xq8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NDY2OWU5YzI0NDdkODBhZGQ0YzlhYyIsImlhdCI6MTczMjY2NzkwNCwiZXhwIjoxNzMyNjcxNTA0fQ.Zt5zKsfHrISsuSNkGTJwydy_YyTElq9VmExLo7Xg2gw
 
 {
-  "name": "Nicolle",
-  "cpf": "243.233.111-23",
-  "birthDate": "2001-08-29",
+  "name": "Jullia",
+  "cpf": "120.383.654-66",
+  "birthDate": "2002-05-03",
   "institution": "Falcudade ESUDA",
-  "course": "Marketing digital",
+  "course": "ADS",
   "issuer": "Falcudade ESUDA",
   "validity": "2025-03-30"
 }
 
 ### Retorna uma única carteirinha pelo ID (Protegido)
 # Substitua `student_id` com o ID do estudante para testar este endpoint
-GET http://localhost:3000/api/students/6729246d8bfb800855f293d2
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MjkyMmQ1OGJmYjgwMDg1NWYyOTNjMiIsImlhdCI6MTczMDc0OTE4NSwiZXhwIjoxNzMwNzUyNzg1fQ.ywHaiNvgweTW2MKFGeDlcwePfR5DzueqoXhjIdb8Xq8
+GET http://localhost:3000/api/students/674669e9c2447d80add4c9ac
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NDY2OWU5YzI0NDdkODBhZGQ0YzlhYyIsImlhdCI6MTczMjY2NzkwNCwiZXhwIjoxNzMyNjcxNTA0fQ.Zt5zKsfHrISsuSNkGTJwydy_YyTElq9VmExLo7Xg2gw
 
 ### Atualiza um Estudante pelo ID (Protegido)
 # Substitua `student_id` com o ID do estudante para atualizar
