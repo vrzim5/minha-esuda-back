@@ -3,9 +3,9 @@ POST http://localhost:3000/api/auth/signup
 Content-Type: application/json
 
 {
-  "email": "17232054@esuda.edu.br",
+  "email": "jullia123@esuda.edu.br",
   "password": "senha123",
-  "name": "Jullia Azevedo"
+  "name": "Jullia Azevedo de Lima"
 }
 
 ### Entra com um usuário existente
