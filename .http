@@ -9,11 +9,11 @@ Content-Type: application/json
 }
 
 ### Entra com um usuário existente
-POST https://minha-esuda-back.onrender.com/api/auth/login
+POST http://localhost:3000/api/auth/login
 Content-Type: application/json
 
 {
-  "email": "17232054@esuda.edu.br",
+  "email": "jullia123@esuda.edu.br",
   "password": "senha123"
 }
 
@@ -22,9 +22,9 @@ GET http://localhost:3000/api/students
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NDY2OWU5YzI0NDdkODBhZGQ0YzlhYyIsImlhdCI6MTczMjY2NzkwNCwiZXhwIjoxNzMyNjcxNTA0fQ.Zt5zKsfHrISsuSNkGTJwydy_YyTElq9VmExLo7Xg2gw
 
 ### Cria carteirinha (Protegido)
-POST https://minha-esuda-back.onrender.com/api/students
+POST http://localhost:3000/api/students
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NDY2OWU5YzI0NDdkODBhZGQ0YzlhYyIsImlhdCI6MTczMjY2NzkwNCwiZXhwIjoxNzMyNjcxNTA0fQ.Zt5zKsfHrISsuSNkGTJwydy_YyTElq9VmExLo7Xg2gw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NDc0NjVmODc0MGQ2MjM2ZDlhZjBjOSIsImlhdCI6MTczMzMyMDU4NSwiZXhwIjoxNzMzMzI0MTg1fQ.ynAULYdDvP1I8Zgga8GOk8GMKfttl2cSomx3Qd_qwYY
 
 {
   "name": "Jullia",
