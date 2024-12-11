@@ -19,7 +19,9 @@ const storage = multer.diskStorage({
     cb(null, Date.now() + "-" + file.originalname);
   },
 });
+
 const upload = multer({ storage: storage, limits: { fileSize: 153600 } });
+
 router
   .route("/")
   .get(protect, getStudents)
@@ -30,9 +32,5 @@ router
   .put(protect, upload.single("profilePicture"), updateStudent)
   .delete(protect, deleteStudent);
 
-
-// router.route("/").get(protect, getStudents).post(protect, createStudent);
-// router.route("/:id").put(protect, updateStudent).delete(protect, deleteStudent);
-// router.route("/:id").get(protect, getStudent).put(protect, updateStudent).delete(protect, deleteStudent);
 
 module.exports = router;
