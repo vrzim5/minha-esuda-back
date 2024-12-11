@@ -17,6 +17,7 @@ Content-Type: application/json
   "password": "senha123"
 }
 
+
 ### Retorna todas as carteirinhas (Protegido)
 GET http://localhost:3000/api/students
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NDY2OWU5YzI0NDdkODBhZGQ0YzlhYyIsImlhdCI6MTczMjY2NzkwNCwiZXhwIjoxNzMyNjcxNTA0fQ.Zt5zKsfHrISsuSNkGTJwydy_YyTElq9VmExLo7Xg2gw

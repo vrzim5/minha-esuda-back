@@ -1,64 +1,49 @@
-# Aplicativo Mobile Minha Esuda para Carteirinha de Estudante Institucional
+# Backend para o Projeto Minha Esuda
 
-Este projeto visa criar um aplicativo móvel para disponibilizar a carteirinha de estudante institucional da Faculdade ESUDA diretamente no smartphone dos alunos. O aplicativo combina tecnologias de backend, desenvolvimento mobile e design UI/UX para oferecer uma solução completa, funcional e centrada no usuário. 
+Este repositório contém a API backend para o projeto "Minha Esuda", que visa fornecer uma plataforma para gerenciamento de carteirinhas de estudante institucionais da Faculdade ESUDA. A API é construída utilizando Node.js, Express e MongoDB, e oferece endpoints para autenticação, gerenciamento de usuários e documentos.
 
-## 🎯 Objetivo  
+## 🎯 Objetivo
 
-Desenvolver uma plataforma móvel que permita:  
-- Acesso virtual à carteirinha de estudante.  
-- Integração com backend para gerenciamento de dados dos alunos.  
-- Experiência de usuário intuitiva, responsiva e acessível. 
+Desenvolver uma API robusta e segura que permita:
 
-## 🛠️ Tecnologias e Ferramentas  
+- Autenticação e autorização de usuários.
+- Gerenciamento de dados dos alunos e suas carteirinhas de estudante.
+- Integração com o frontend mobile para fornecer uma experiência completa aos usuários.
 
-- **Backend**:  
-  - Node.js, Express  
-  - Banco de dados: MongoDB
-  - ORM: Mongoose  
-  - Autenticação: JWT  
+## 🛠️ Tecnologias e Ferramentas
 
-- **Mobile**:  
-  - React Native, Expo  
-  - Leitura de QR Code: `expo-camera`  
+- **Backend**:
+  - Node.js
+  - Express
+  - MongoDB
+  - Mongoose (ORM)
+  - JWT (Autenticação)
 
-## ⚙️ Funcionalidades  
-1. **Leitura de QR Code**  
-   - Vinculação da carteirinha física ao perfil do aluno.  
+## 🚀 Como Instalar e Usar
 
-2. **Autenticação de Usuários**  
-   - Cadastro via e-mail institucional e senha.  
-   - Recuperação de senha por e-mail.  
-   - Segurança com JWT.  
-
-3. **Exibição de Carteirinha Virtual**  
-   - Exibição de dados da carteirinha
-   - Layout visualmente atraente e legível.  
-
-4. **Backend Robust**  
-   - Armazenamento e gerenciamento seguro dos dados.  
-   - API REST para autenticação e consulta de informações.  
-
-5. **Design Responsivo e Acessível**  
-   - Compatível com diferentes tamanhos de tela e dispositivos.
-   - Compatível com modo retrato e paisagem  
-   - Suporte a leitores de tela e navegação por teclado.  
-
-## 🚀 Como Instalar e Usar  
-
-1. Clone este repositório:  
-   ```bash  
+1. Clone este repositório:
+   ```bash
    git clone https://github.com/JulliaAP/minha-esuda-back.git
    ```
 2. Instale as dependências:
-  ```bash  
-  npm install  
-  ```
+
+```bash
+npm install
+```
+
 3. Configure o arquivo .env com as variáveis de ambiente necessárias.
 
+```bash
+PORT=3000
+MONGO_URI=<"sua string de conexão do mongodb">
+JWT_SECRET=sua_chave_secreta
+```
+
 4. Inicie o aplicativo
-  ```bash  
-  npm start  
-  ```
+
+```bash
+npm start
+```
 
 ## 🤝 Contribuição
 
@@ -69,7 +54,6 @@ Contribuições são sempre bem-vindas!
 3. Commit suas mudanças (`git commit -m 'Adiciona nova feature'`).
 4. 4. Faça o push para a branch (`git push origin feature/nova-feature`).
 5. Abra um Pull Request com suas alterações.
-
 
 ## 📜 Licença
 
